@@ -1,0 +1,104 @@
+commit 36d093b34fb80edc7569f47e2478dcb4873e3355
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:54:09 2023 +0200
+
+    file1 lähti ja file22 muutos
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6c7cc36b2eb1ff864bc12ab0fbbfe2d0f55ddd39
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:50:06 2023 +0200
+
+    filet
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b488a32f7204afb9f3ab237d1ea915bd7c4deea0
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:44:12 2023 +0200
+
+    eka ja kolmas muutettu
+
+ eka.txt    | 4 +++-
+ kolmas.txt | 2 +-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit 993e2dc0c19a5a9bf2c3ffbaac0fd8060f8efe8f
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:42:40 2023 +0200
+
+    eka lisätty
+
+ eka.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 6cdd0a0aacc99d7428143dc71a2e8e106cf41df8
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:42:05 2023 +0200
+
+    muutettu tiedosto.txt -> eka.txt
+
+ tiedosto.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 6436ebb72221907e80832d9005b19a6187b8a250
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:40:06 2023 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 194a69113edc85d34bb25ed4fea67fa18dee4a18
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:32:40 2023 +0200
+
+    stuff kansio
+
+ stuff/some.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d192d07961091038b82c49f9ea2da8666b088b78
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:32:11 2023 +0200
+
+    toka ja kolmas muuttuivat
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 815032b49a8070ce1ead70569e1be3500af53e34
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:31:19 2023 +0200
+
+    kolmas lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 90dcd6f95ba5cae099f03951895ac0d4e2a72ae8
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:25:51 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 433913b0398b8942d921f8a0ea854c771f4b6676
+Author: Tuukka Yildirim <tuukka.yildirim@gmail.com>
+Date:   Tue Mar 21 12:22:45 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
