@@ -1,0 +1,20 @@
+title Tehtävä 3 (https://www.websequencediagrams.com/)
+
+Main->Machine: Machine()
+Machine->FuelTank: fuel_contents(40)
+Machine->Engine: Start()
+Engine->FuelTank: consume(5)
+Machine->Engine: is_running()
+Engine-->Machine: True
+Machine->Engine: consume(10)
+Machine->Engine: is_running()
+Engine-->Machine: True
+Machine->Engine: consume(10)
+Machine->Engine: is_running()
+Engine-->Machine: True
+Machine->Engine: consume(10)
+Machine->Engine: is_running()
+Engine-->Machine: True
+Machine->Engine: consume(10)
+Machine->Engine: is_running()
+Engine-->Machine: False
