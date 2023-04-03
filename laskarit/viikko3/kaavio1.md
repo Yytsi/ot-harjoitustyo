@@ -18,7 +18,7 @@
       }
       class Ruutu{
         id
-        next_id
+        seuraava_id
       }
       class Noppa{
 
