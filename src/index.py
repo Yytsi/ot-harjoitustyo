@@ -3,7 +3,7 @@ from ui.ui import UI
 
 def main():
     window = Tk()
-    window.title("CatchIt Game")
+    window.title("CatchIt Game (images are license free)")
 
     ui_view = UI(window)
     ui_view.start()
