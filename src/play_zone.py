@@ -12,7 +12,6 @@ class PlayZone:
         self.players = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self.game_over = False
-        self.playermoving = [0]*4
 
         self._initialize_sprites()
     
