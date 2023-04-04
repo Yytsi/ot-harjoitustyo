@@ -18,7 +18,8 @@ class UI:
         self._hide_current_view()
 
         self._current_view = MainMenuView(
-            self._root
+            self._root,
+            self._show_main_menu_view
         )
 
         self._current_view.pack()

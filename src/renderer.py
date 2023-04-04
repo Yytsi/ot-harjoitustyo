@@ -6,5 +6,6 @@ class Renderer:
         self._play_zone = play_zone
     
     def render(self):
+        self._display.fill("white")
         self._play_zone.all_sprites.draw(self._display)
         pygame.display.update()
