@@ -13,6 +13,8 @@
 
 ## Käynnistäminen
 
+Aluksi asennetaan riippuvuudet: ```poetry install```.
+
 Pelin voi käynnistää näin: ```poetry run invoke start```.
 
 Testit suoritetaan näin: ```poetry run invoke test```.
