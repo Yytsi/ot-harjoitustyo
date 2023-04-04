@@ -16,3 +16,6 @@
 Pelin voi käynnistää näin: ```poetry run invoke start```.
 
 Testit suoritetaan näin: ```poetry run invoke test```.
+
+## Pelaus
+Tällä hetkellä vain pelaaja 1 voi liikuttaa pelaajaansa WASD näppäimillä.
