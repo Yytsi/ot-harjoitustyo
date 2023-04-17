@@ -19,6 +19,8 @@ Pelin voi käynnistää näin: ```poetry run invoke start```.
 
 Testit suoritetaan näin: ```poetry run invoke test```.
 
+Pylint tarkistukset voi suorittaa näin: ```poetry run invoke lint```.
+
 ## Pelaus
 Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimillä. Kentän ulkopuolelle ei voi liikkua eikä keskirajaa voi ylittää.
 
