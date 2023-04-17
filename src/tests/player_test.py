@@ -24,4 +24,7 @@ class TestPlayer(unittest.TestCase):
 
     def test_cannot_pass_left_wall(self):
         zone = PlayZone()
-        self.assertEqual(zone.player1.rect.x, 50)
+        zone.player1.rect.x = 0
+        zone.player1.player_moving[0] = True
+        zone.update()
+        self.assertEqual(zone.player1.rect.x, 0)
