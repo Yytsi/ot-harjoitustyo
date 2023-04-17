@@ -6,7 +6,7 @@ from sprites.player import Player
 
 class TestPlayer(unittest.TestCase):
     def setUp(self):
-        self.test_player = Player()
+        self.test_player = Player(60, 60)
 
     def test_can_move_to_directions(self):
         expected = [-2, -2, 2, 2]

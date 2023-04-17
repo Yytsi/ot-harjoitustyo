@@ -28,23 +28,14 @@ class Player(pygame.sprite.Sprite):
     def update(self):
         if self.player_moving[0]:
             self.face_to_direction(self.PLAYER_DIRECTION_LEFT)
-            self.move_player(-2, 0)
+            self.rect.x -= 2
         if self.player_moving[1]:
-            self.move_player(0, -2)
+            self.rect.y -= 2
         if self.player_moving[2]:
             self.face_to_direction(self.PLAYER_DIRECTION_RIGHT)
-            self.move_player(2, 0)
+            self.rect.x += 2
         if self.player_moving[3]:
-            self.move_player(0, 2)
-
-    def move_player(self, delta_x=0, delta_y=0):
-        self.rect.move_ip(delta_x, delta_y)
-        window_width, window_height = pygame.display.get_surface().get_size()
-        x_coord, y_coord = self.rect.x, self.rect.y
-
-        if x_coord < 0 or x_coord + self.rect.width > window_width \
-                or y_coord < 0 or y_coord + self.rect.height > window_height:
-            self.rect.move_ip(-delta_x, -delta_y)
+            self.rect.y += 2
 
     def face_to_direction(self, direction):
         if self.direction != direction:

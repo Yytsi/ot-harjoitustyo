@@ -17,24 +17,29 @@ class PlayZone:
         self.all_sprites = pygame.sprite.Group()
         self.game_over = False
 
+        if pygame.display.get_surface() is None:
+            self.window_width = 640
+            self.window_height = 400
+        else:
+            self.window_width, self.window_height = pygame.display.get_surface().get_size()
+
         self._initialize_sprites()
 
     def _initialize_sprites(self):
         # Scale the images according to the width of the game window.
-        window_width, window_height = pygame.display.get_surface().get_size()
-        scale_factor = window_width / 640
-        self.middle_wall = Line(window_width // 2, 0, 1, window_height)
+        scale_factor = self.window_width / 640
+        self.middle_wall = Line(self.window_width // 2, 0, 1, self.window_height)
         self.player1 = Player(50, 50, int(
             scale_factor * 33), int(scale_factor * 63))
         self.player2 = Player(400, 200, int(
             scale_factor * 33), int(scale_factor * 63))
-        self.monster = Monster(window_width // 2, window_height // 2, int(
+        self.monster = Monster(self.window_width // 2, self.window_height // 2, int(
             scale_factor * 48), int(scale_factor * 60))
 
         self.monster.rect.x -= self.monster.rect.width // 2
         self.monster.rect.y -= self.monster.rect.height // 2
 
-        self.coin = Coin(window_width * 2, window_height * 2, int(scale_factor * 32),
+        self.coin = Coin(self.window_width * 2, self.window_height * 2, int(scale_factor * 32),
                          int(scale_factor * 32))
 
         self.replace_coin()
@@ -44,13 +49,12 @@ class PlayZone:
                              self.monster, self.middle_wall)
 
     def replace_coin(self):
-        window_width, window_height = pygame.display.get_surface().get_size()
-        new_box_x = random.randint(0, window_width // 2 - self.coin.rect.width)
-        new_box_y = random.randint(0, window_height - self.coin.rect.height)
+        new_box_x = random.randint(0, self.window_width // 2 - self.coin.rect.width)
+        new_box_y = random.randint(0, self.window_height - self.coin.rect.height)
 
         if self.coin.location == Coin.COIN_LOCATION_LEFT:
             self.coin.location = Coin.COIN_LOCATION_RIGHT
-            self.coin.rect.x = new_box_x + window_width // 2
+            self.coin.rect.x = new_box_x +self.window_width // 2
             self.coin.rect.y = new_box_y
         else:
             self.coin.location = Coin.COIN_LOCATION_LEFT
@@ -62,6 +66,10 @@ class PlayZone:
             prev_x, prev_y = player.rect.x, player.rect.y
             player.update()
             if pygame.sprite.collide_rect(player, self.middle_wall):
+                player.rect.x = prev_x
+                player.rect.y = prev_y
+            elif player.rect.x < 0 or player.rect.x + player.rect.width > self.window_width \
+                    or player.rect.y < 0 or player.rect.y + player.rect.height > self.window_height:
                 player.rect.x = prev_x
                 player.rect.y = prev_y
 
