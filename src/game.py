@@ -8,7 +8,7 @@ from clock import Clock
 
 class Game:
     def __init__(self):
-        self._display = pygame.display.set_mode((640, 480))
+        self._display = pygame.display.set_mode((640, 400))
 
         self._play_zone = PlayZone()
         self._event_queue = EventQueue()

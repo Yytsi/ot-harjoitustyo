@@ -9,7 +9,7 @@ class GameLoop:
         self._clock = clock
 
     def start(self):
-        while True:
+        while not self._play_zone.game_over:
             if not self._handle_events():
                 break
 
@@ -20,6 +20,11 @@ class GameLoop:
                 break
 
             self._clock.tick(60)
+        self.end_game()
+    
+    def end_game(self):
+        self._play_zone.game_over = True
+        pygame.quit()
 
     def _handle_events(self):
         for event in self._event_queue.get():

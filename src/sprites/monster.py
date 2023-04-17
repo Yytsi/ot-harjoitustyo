@@ -6,7 +6,7 @@ class Monster(pygame.sprite.Sprite):
     MONSTER_DIRECTION_LEFT = 0
     MONSTER_DIRECTION_RIGHT = 1
 
-    def __init__(self, y=0, x=0, height=64, width=64):
+    def __init__(self, x=0, y=0, width=48, height=60):
         super().__init__()
 
         self._images = {
@@ -15,7 +15,7 @@ class Monster(pygame.sprite.Sprite):
         }
 
         for key, image in self._images.items():
-            self._images[key] = pygame.transform.scale(image, (height, width))
+            self._images[key] = pygame.transform.scale(image, (width, height))
 
         self.image = self._images["monster_facing_right"]
         self.rect = self.image.get_rect()
