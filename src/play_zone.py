@@ -16,7 +16,6 @@ class PlayZone:
         self.players = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self.game_over = False
-        self.coin_location = Coin.COIN_LOCATION_LEFT
 
         self._initialize_sprites()
 
@@ -29,10 +28,16 @@ class PlayZone:
             scale_factor * 33), int(scale_factor * 63))
         self.player2 = Player(400, 200, int(
             scale_factor * 33), int(scale_factor * 63))
-        self.monster = Monster(200, 200, int(
+        self.monster = Monster(window_width // 2, window_height // 2, int(
             scale_factor * 48), int(scale_factor * 60))
-        self.coin = Coin(100, 100, int(scale_factor * 32),
+        
+        self.monster.rect.x -= self.monster.rect.width // 2
+        self.monster.rect.y -= self.monster.rect.height // 2
+        
+        self.coin = Coin(window_width * 2, window_height * 2, int(scale_factor * 32),
                          int(scale_factor * 32))
+        
+        self.replace_coin()
 
         self.players.add(self.player1, self.player2)
         self.all_sprites.add(self.coin, self.players,
@@ -42,12 +47,13 @@ class PlayZone:
         window_width, window_height = pygame.display.get_surface().get_size()
         new_box_x = random.randint(0, window_width // 2 - self.coin.rect.width)
         new_box_y = random.randint(0, window_height - self.coin.rect.height)
-        if self.coin_location == Coin.COIN_LOCATION_LEFT:
-            self.coin_location = Coin.COIN_LOCATION_RIGHT
+
+        if self.coin.location == Coin.COIN_LOCATION_LEFT:
+            self.coin.location = Coin.COIN_LOCATION_RIGHT
             self.coin.rect.x = new_box_x + window_width // 2
             self.coin.rect.y = new_box_y
         else:
-            self.coin_location = Coin.COIN_LOCATION_LEFT
+            self.coin.location = Coin.COIN_LOCATION_LEFT
             self.coin.rect.x = new_box_x
             self.coin.rect.y = new_box_y
 
@@ -66,3 +72,6 @@ class PlayZone:
         # Check if a player hits the coin.
         if pygame.sprite.spritecollide(self.coin, self.players, False):
             self.replace_coin()
+        
+        # Move monster.
+        self.monster.chase_player(self.player1 if self.coin.location == Coin.COIN_LOCATION_LEFT else self.player2)

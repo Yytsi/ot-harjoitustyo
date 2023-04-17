@@ -5,6 +5,7 @@ from load_image import load_image
 class Monster(pygame.sprite.Sprite):
     MONSTER_DIRECTION_LEFT = 0
     MONSTER_DIRECTION_RIGHT = 1
+    MONSTER_SPEED = 1
 
     def __init__(self, origin_x=0, origin_y=0, width=48, height=60):
         super().__init__()
@@ -22,10 +23,20 @@ class Monster(pygame.sprite.Sprite):
         self.rect.x = origin_x
         self.rect.y = origin_y
         self.direction = self.MONSTER_DIRECTION_LEFT
+    
+    def chase_player(self, player):
+        if self.rect.x < player.rect.x:
+            self.rect.x += Monster.MONSTER_SPEED
+        elif self.rect.x > player.rect.x:
+            self.rect.x -= Monster.MONSTER_SPEED
+        if self.rect.y < player.rect.y:
+            self.rect.y += Monster.MONSTER_SPEED
+        if self.rect.y > player.rect.y:
+            self.rect.y -= Monster.MONSTER_SPEED
 
     def face_to_direction(self, direction):
         if self.direction != direction:
-            if direction == self.PLAYER_DIRECTION_RIGHT:
+            if direction == self.MONSTER_DIRECTION_RIGHT:
                 self.image = self._images["monster_facing_right"]
             else:
                 self.image = self._images["monster_facing_left"]
