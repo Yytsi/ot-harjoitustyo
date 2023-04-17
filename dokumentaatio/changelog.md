@@ -10,3 +10,4 @@
 - Pelaajat eivät voi liikkua rajojen ulkopuolelle tai keskiviivan läpi.
 - Kolikon voi kerätä ja se syntyy toiselle puolelle satunnaiseen kohtaan.
 - Hirviö jahtaa pelaajaa, jonka puolella kolikko on.
+- Hirviöön osuminen päättää pelin.
