@@ -6,7 +6,7 @@
 
 ## Viikko 4
 
-- Kuvien (objektien) mittasuhteet on kunnossa (sopeutuu ruudun kokoon).
+- Kuvien (objektien) mittasuhteet on kunnossa (tukee sopeutumista ruudun kokoon).
 - Pelaajat eivät voi liikkua rajojen ulkopuolelle tai keskiviivan läpi.
 - Kolikon voi kerätä ja se syntyy toiselle puolelle satunnaiseen kohtaan.
 - Hirviö jahtaa pelaajaa, jonka puolella kolikko on.
