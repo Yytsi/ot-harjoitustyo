@@ -1,5 +1,5 @@
-import pygame
 import random
+import pygame
 from sprites.player import Player
 from sprites.monster import Monster
 from sprites.coin import Coin
@@ -47,7 +47,7 @@ class PlayZone:
 
         self.players.add(self.player1, self.player2)
         self.all_sprites.add(self.coin, self.players,
-                             self.monster, self.middle_wall)
+                             self.middle_wall, self.monster)
 
     def replace_coin(self):
         new_box_x = random.randint(
