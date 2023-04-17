@@ -22,7 +22,7 @@ Testit suoritetaan näin: ```poetry run invoke test```.
 Pylint tarkistukset voi suorittaa näin: ```poetry run invoke lint```.
 
 ## Pelaus
-Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimillä. Kentän ulkopuolelle ei voi liikkua eikä keskirajaa voi ylittää.
+Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimillä. Kentän ulkopuolelle ei voi liikkua eikä keskirajaa voi ylittää. Kolikon haettua hirviö vaihtaa jahtaamaansa pelaajaa.
 
 ## Kuvien lisenssi
 Pelin käyttämät kuvat ovat sivustolta [itch.io](itch.io), joista osaa voi käyttää mainitsematta mitään.
