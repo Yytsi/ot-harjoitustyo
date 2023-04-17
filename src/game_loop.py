@@ -21,7 +21,7 @@ class GameLoop:
 
             self._clock.tick(60)
         self.end_game()
-    
+
     def end_game(self):
         self._play_zone.game_over = True
         pygame.quit()

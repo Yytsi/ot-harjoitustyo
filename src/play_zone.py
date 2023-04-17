@@ -1,4 +1,5 @@
 import pygame
+import random
 from sprites.player import Player
 from sprites.monster import Monster
 from sprites.coin import Coin
@@ -11,10 +12,11 @@ class PlayZone:
         self.player2 = None
         self.monster = None
         self.middle_wall = None
-        self.coins = pygame.sprite.Group()
+        self.coin = None
         self.players = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self.game_over = False
+        self.coin_location = Coin.COIN_LOCATION_LEFT
 
         self._initialize_sprites()
 
@@ -23,13 +25,31 @@ class PlayZone:
         window_width, window_height = pygame.display.get_surface().get_size()
         scale_factor = window_width / 640
         self.middle_wall = Line(window_width // 2, 0, 1, window_height)
-        self.player1 = Player(50, 50, int(scale_factor * 33), int(scale_factor * 63))
-        self.player2 = Player(400, 200, int(scale_factor * 33), int(scale_factor * 63))
-        self.monster = Monster(200, 200, int(scale_factor * 48), int(scale_factor * 60))
-        self.coins.add(Coin(100, 100, int(scale_factor * 32), int(scale_factor * 32)))
+        self.player1 = Player(50, 50, int(
+            scale_factor * 33), int(scale_factor * 63))
+        self.player2 = Player(400, 200, int(
+            scale_factor * 33), int(scale_factor * 63))
+        self.monster = Monster(200, 200, int(
+            scale_factor * 48), int(scale_factor * 60))
+        self.coin = Coin(100, 100, int(scale_factor * 32),
+                         int(scale_factor * 32))
 
         self.players.add(self.player1, self.player2)
-        self.all_sprites.add(self.coins, self.players, self.monster, self.middle_wall)
+        self.all_sprites.add(self.coin, self.players,
+                             self.monster, self.middle_wall)
+
+    def replace_coin(self):
+        window_width, window_height = pygame.display.get_surface().get_size()
+        new_box_x = random.randint(0, window_width // 2 - self.coin.rect.width)
+        new_box_y = random.randint(0, window_height - self.coin.rect.height)
+        if self.coin_location == Coin.COIN_LOCATION_LEFT:
+            self.coin_location = Coin.COIN_LOCATION_RIGHT
+            self.coin.rect.x = new_box_x + window_width // 2
+            self.coin.rect.y = new_box_y
+        else:
+            self.coin_location = Coin.COIN_LOCATION_LEFT
+            self.coin.rect.x = new_box_x
+            self.coin.rect.y = new_box_y
 
     def update(self):
         for player in self.player1, self.player2:
@@ -42,3 +62,7 @@ class PlayZone:
         # Check if a player hits the monster.
         if pygame.sprite.spritecollide(self.monster, self.players, False):
             self.game_over = True
+
+        # Check if a player hits the coin.
+        if pygame.sprite.spritecollide(self.coin, self.players, False):
+            self.replace_coin()
