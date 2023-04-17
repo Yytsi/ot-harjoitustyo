@@ -20,7 +20,7 @@ Pelin voi käynnistää näin: ```poetry run invoke start```.
 Testit suoritetaan näin: ```poetry run invoke test```.
 
 ## Pelaus
-Tällä hetkellä vain pelaaja 1 voi liikuttaa pelaajaansa WASD näppäimillä.
+Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimillä. Kentän ulkopuolelle ei voi liikkua eikä keskirajaa voi ylittää.
 
 ## Kuvien lisenssi
 Käytetyt kuvat pelissä ovat sivustolta [https://kenney.nl/](https://kenney.nl/), jonka tarjoamia kuvia voi käyttää ilman lisenssiä [cc0 ns. tyhjä lisenssi](https://creativecommons.org/share-your-work/public-domain/cc0/).
