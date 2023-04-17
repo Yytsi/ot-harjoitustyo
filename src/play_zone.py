@@ -28,7 +28,8 @@ class PlayZone:
     def _initialize_sprites(self):
         # Scale the images according to the width of the game window.
         scale_factor = self.window_width / 640
-        self.middle_wall = Line(self.window_width // 2, 0, 1, self.window_height)
+        self.middle_wall = Line(self.window_width // 2,
+                                0, 1, self.window_height)
         self.player1 = Player(50, 50, int(
             scale_factor * 33), int(scale_factor * 63))
         self.player2 = Player(400, 200, int(
@@ -49,12 +50,14 @@ class PlayZone:
                              self.monster, self.middle_wall)
 
     def replace_coin(self):
-        new_box_x = random.randint(0, self.window_width // 2 - self.coin.rect.width)
-        new_box_y = random.randint(0, self.window_height - self.coin.rect.height)
+        new_box_x = random.randint(
+            0, self.window_width // 2 - self.coin.rect.width)
+        new_box_y = random.randint(
+            0, self.window_height - self.coin.rect.height)
 
         if self.coin.location == Coin.COIN_LOCATION_LEFT:
             self.coin.location = Coin.COIN_LOCATION_RIGHT
-            self.coin.rect.x = new_box_x +self.window_width // 2
+            self.coin.rect.x = new_box_x + self.window_width // 2
             self.coin.rect.y = new_box_y
         else:
             self.coin.location = Coin.COIN_LOCATION_LEFT

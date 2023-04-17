@@ -2,6 +2,7 @@ import unittest
 import pygame
 
 from sprites.player import Player
+from play_zone import PlayZone
 
 
 class TestPlayer(unittest.TestCase):
@@ -20,3 +21,7 @@ class TestPlayer(unittest.TestCase):
             coordinate = [self.test_player.rect.y,
                           self.test_player.rect.x][1 - i % 2]
             self.assertEqual(coordinate, expected[i])
+
+    def test_cannot_pass_left_wall(self):
+        zone = PlayZone()
+        self.assertEqual(zone.player1.rect.x, 50)
