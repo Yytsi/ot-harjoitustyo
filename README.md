@@ -23,4 +23,4 @@ Testit suoritetaan näin: ```poetry run invoke test```.
 Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimillä. Kentän ulkopuolelle ei voi liikkua eikä keskirajaa voi ylittää.
 
 ## Kuvien lisenssi
-Käytetyt kuvat pelissä ovat sivustolta [https://kenney.nl/](https://kenney.nl/), jonka tarjoamia kuvia voi käyttää ilman lisenssiä [cc0 ns. tyhjä lisenssi](https://creativecommons.org/share-your-work/public-domain/cc0/).
+Pelin käyttämät kuvat ovat sivustolta [itch.io](itch.io), joista osaa voi käyttää mainitsematta mitään.
