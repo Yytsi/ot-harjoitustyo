@@ -30,13 +30,13 @@ class PlayZone:
             scale_factor * 33), int(scale_factor * 63))
         self.monster = Monster(window_width // 2, window_height // 2, int(
             scale_factor * 48), int(scale_factor * 60))
-        
+
         self.monster.rect.x -= self.monster.rect.width // 2
         self.monster.rect.y -= self.monster.rect.height // 2
-        
+
         self.coin = Coin(window_width * 2, window_height * 2, int(scale_factor * 32),
                          int(scale_factor * 32))
-        
+
         self.replace_coin()
 
         self.players.add(self.player1, self.player2)
@@ -72,6 +72,7 @@ class PlayZone:
         # Check if a player hits the coin.
         if pygame.sprite.spritecollide(self.coin, self.players, False):
             self.replace_coin()
-        
+
         # Move monster.
-        self.monster.chase_player(self.player1 if self.coin.location == Coin.COIN_LOCATION_LEFT else self.player2)
+        self.monster.chase_player(
+            self.player1 if self.coin.location == Coin.COIN_LOCATION_LEFT else self.player2)

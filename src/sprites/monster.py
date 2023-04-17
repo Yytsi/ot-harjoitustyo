@@ -23,7 +23,7 @@ class Monster(pygame.sprite.Sprite):
         self.rect.x = origin_x
         self.rect.y = origin_y
         self.direction = self.MONSTER_DIRECTION_LEFT
-    
+
     def chase_player(self, player):
         if self.rect.x < player.rect.x:
             self.rect.x += Monster.MONSTER_SPEED
