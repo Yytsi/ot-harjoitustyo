@@ -5,10 +5,11 @@ from event_queue import EventQueue
 from renderer import Renderer
 from clock import Clock
 
+
 class Game:
     def __init__(self):
         self._display = pygame.display.set_mode((640, 480))
-        
+
         self._play_zone = PlayZone()
         self._event_queue = EventQueue()
         self._renderer = Renderer(self._display, self._play_zone)
@@ -19,7 +20,6 @@ class Game:
             self._event_queue,
             self._clock
         )
-
 
     def play_game(self):
         pygame.init()

@@ -1,6 +1,7 @@
 import pygame
 from load_image import load_image
 
+
 class Monster(pygame.sprite.Sprite):
     def __init__(self, y=0, x=0, height=64, width=64):
         super().__init__()

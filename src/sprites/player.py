@@ -1,6 +1,7 @@
 import pygame
 from load_image import load_image
 
+
 class Player(pygame.sprite.Sprite):
     def __init__(self, y=0, x=0, height=64, width=64):
         super().__init__()
@@ -17,7 +18,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.y = y
         self.rect.x = x
-    
+
     def update(self):
         if self.player_moving[0]:
             self.rect.x -= 2

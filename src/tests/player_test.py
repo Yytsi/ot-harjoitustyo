@@ -3,6 +3,7 @@ import pygame
 
 from sprites.player import Player
 
+
 class TestPlayer(unittest.TestCase):
     def setUp(self):
         self.test_player = Player()
@@ -16,5 +17,6 @@ class TestPlayer(unittest.TestCase):
             self.test_player.rect.y = 0
             self.test_player.rect.x = 0
             self.test_player.update()
-            coordinate = [self.test_player.rect.y, self.test_player.rect.x][1 - i % 2]
+            coordinate = [self.test_player.rect.y,
+                          self.test_player.rect.x][1 - i % 2]
             self.assertEqual(coordinate, expected[i])

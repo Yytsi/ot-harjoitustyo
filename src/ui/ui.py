@@ -1,5 +1,6 @@
 from ui.main_menu import MainMenuView
 
+
 class UI:
     def __init__(self, root):
         self._root = root

@@ -3,6 +3,7 @@ from sprites.player import Player
 from sprites.monster import Monster
 from sprites.coin import Coin
 
+
 class PlayZone:
     def __init__(self):
         self.player1 = None
@@ -14,7 +15,7 @@ class PlayZone:
         self.game_over = False
 
         self._initialize_sprites()
-    
+
     def _initialize_sprites(self):
         # Place players in their own sides.
         self.player1 = Player(x=50, y=50)
@@ -24,7 +25,7 @@ class PlayZone:
 
         self.players.add(self.player1, self.player2)
         self.all_sprites.add(self.coins, self.players, self.monster)
-    
+
     def update(self):
         self.player1.update()
         self.player2.update()
