@@ -25,4 +25,4 @@ Pylint tarkistukset voi suorittaa näin: ```poetry run invoke lint```.
 Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimillä. Kentän ulkopuolelle ei voi liikkua eikä keskirajaa voi ylittää. Kolikon haettua hirviö vaihtaa jahtaamaansa pelaajaa.
 
 ## Kuvien lisenssi
-Pelin käyttämät kuvat ovat sivustolta [itch.io](itch.io), joista osaa voi käyttää mainitsematta mitään.
+Pelin käyttämät kuvat ovat sivustolta [itch.io](itch.io), josta on valittu sellaiset kuvat jotka eivät vaatineet mainintaa lisenssistä tai mistään.
