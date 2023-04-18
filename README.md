@@ -11,6 +11,8 @@
 
 [Changelog](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
+[Arkkitehtuurikuvaus](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ## Käynnistäminen
 
 Aluksi asennetaan riippuvuudet: ```poetry install```.
