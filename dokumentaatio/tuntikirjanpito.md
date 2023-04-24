@@ -7,5 +7,5 @@
 | 4.4 | 3    | Pygamen ja Tkinterin yhteenkasaus |
 | 17.4 | 2    | Kuvien hankkiminen ja suhteiden suunnittelu |
 | 17.4 | 3    | Liikkuminen, törmäys, objektien mittasuhteet, hirviö jahtaa |
-| 24.4 | 2    | UI:hin tuki pelaajien nimille ja pisteiden näyttäminen pelissä |
-| yht   | 16   | | 
+| 24.4 | 1    | UI:hin tuki pelaajien nimille ja pisteiden näyttäminen pelissä |
+| yht   | 15   | | 
