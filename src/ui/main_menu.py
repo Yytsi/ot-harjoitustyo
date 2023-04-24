@@ -17,14 +17,16 @@ class MainMenuView:
         self._frame.destroy()
 
     def start_game(self):
-        g = Game()
+        player1_name = self.player1_name_entry.get()
+        player2_name = self.player1_name_entry.get()
+        g = Game(player1_name = player1_name, player2_name = player2_name)
         g.play_game()
         self._show_main_menu_view()
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
         title_label = ttk.Label(
-            master=self._frame, text="Welcome to play the game!")
+            master=self._frame, text="Welcome to CatchIt game!")
 
         start_game_button = ttk.Button(
             master=self._frame,
@@ -32,5 +34,17 @@ class MainMenuView:
             command=self.start_game
         )
 
-        title_label.grid(row=0, column=0)
-        start_game_button.grid(row=1, column=0)
+        player1_name_label = ttk.Label(master=self._frame, text="Player 1 name:")
+        player2_name_label = ttk.Label(master=self._frame, text="Player 2 name:")
+
+        self.player1_name_entry = ttk.Entry(master=self._frame)
+        self.player2_name_entry = ttk.Entry(master=self._frame)
+
+        title_label.grid(row=0, column=0, columnspan=2)
+        player1_name_label.grid(row=1, column=0, padx=5, pady=2)
+        self.player1_name_entry.grid(row=1, column=1, padx=5, pady=2, sticky="EW")
+        player2_name_label.grid(row=2, column=0, padx=5, pady=2)
+        self.player2_name_entry.grid(row=2, column=1, padx=5, pady=2, sticky="EW")
+        start_game_button.grid(row=3, column=0, padx=5, pady=5, columnspan=2, sticky="EW")
+
+        self._root.grid_columnconfigure(1, weight=1)

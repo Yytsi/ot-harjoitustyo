@@ -7,7 +7,7 @@ from sprites.line import Line
 
 
 class PlayZone:
-    def __init__(self):
+    def __init__(self, player1_name = "Player 1", player2_name = "Player 2"):
         self.player1 = None
         self.player2 = None
         self.monster = None
