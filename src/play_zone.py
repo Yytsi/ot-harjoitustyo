@@ -10,12 +10,15 @@ class PlayZone:
     def __init__(self, player1_name = "Player 1", player2_name = "Player 2"):
         self.player1 = None
         self.player2 = None
+        self.player1_name = player1_name
+        self.player2_name = player2_name
         self.monster = None
         self.middle_wall = None
         self.coin = None
         self.players = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self.game_over = False
+        self.current_score = 0
 
         if pygame.display.get_surface() is None:
             self.window_width = 640
@@ -24,6 +27,13 @@ class PlayZone:
             self.window_width, self.window_height = pygame.display.get_surface().get_size()
 
         self._initialize_sprites()
+    
+    def get_score_text(self):
+        font = pygame.font.Font(pygame.font.get_default_font(), int((self.window_width / 640)*20))
+        text_surface = font.render("Score: %d" % self.current_score, True, (153, 255, 153))
+        return (text_surface, (10, 10))
+    
+
 
     def _initialize_sprites(self):
         # Scale the images according to the width of the game window.
@@ -83,6 +93,7 @@ class PlayZone:
         # Check if a player hits the coin.
         if pygame.sprite.spritecollide(self.coin, self.players, False):
             self.replace_coin()
+            self.current_score += 1
 
         # Move monster.
         self.monster.chase_player(
