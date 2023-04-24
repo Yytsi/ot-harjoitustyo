@@ -2,6 +2,8 @@ import pygame
 
 
 class GameLoop:
+    MOVEMENT_KEYS_PLAYER1 = [pygame.K_a, pygame.K_w, pygame.K_d, pygame.K_s]
+    MOVEMENT_KEYS_PLAYER2 = [pygame.K_LEFT, pygame.K_UP, pygame.K_RIGHT, pygame.K_DOWN]
     def __init__(self, play_zone, renderer, event_queue, clock):
         self._play_zone = play_zone
         self._renderer = renderer
@@ -34,43 +36,20 @@ class GameLoop:
                 return False
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_a:
-                    self._play_zone.player1.player_moving[0] = True
-                if event.key == pygame.K_w:
-                    self._play_zone.player1.player_moving[1] = True
-                if event.key == pygame.K_d:
-                    self._play_zone.player1.player_moving[2] = True
-                if event.key == pygame.K_s:
-                    self._play_zone.player1.player_moving[3] = True
-                if event.key == pygame.K_LEFT:
-                    self._play_zone.player2.player_moving[0] = True
-                if event.key == pygame.K_UP:
-                    self._play_zone.player2.player_moving[1] = True
-                if event.key == pygame.K_RIGHT:
-                    self._play_zone.player2.player_moving[2] = True
-                if event.key == pygame.K_DOWN:
-                    self._play_zone.player2.player_moving[3] = True
+                if event.key in GameLoop.MOVEMENT_KEYS_PLAYER1:
+                    self._play_zone.player1.player_moving[GameLoop.MOVEMENT_KEYS_PLAYER1.index(event.key)] = True
+                if event.key in GameLoop.MOVEMENT_KEYS_PLAYER2:
+                    self._play_zone.player2.player_moving[GameLoop.MOVEMENT_KEYS_PLAYER2.index(event.key)] = True
                 if event.key == pygame.K_u:
+                    # End the game.
                     self._play_zone.game_over = True
                     pygame.quit()
                     return False
 
             if event.type == pygame.KEYUP:
-                if event.key == pygame.K_a:
-                    self._play_zone.player1.player_moving[0] = False
-                if event.key == pygame.K_w:
-                    self._play_zone.player1.player_moving[1] = False
-                if event.key == pygame.K_d:
-                    self._play_zone.player1.player_moving[2] = False
-                if event.key == pygame.K_s:
-                    self._play_zone.player1.player_moving[3] = False
-                if event.key == pygame.K_LEFT:
-                    self._play_zone.player2.player_moving[0] = False
-                if event.key == pygame.K_UP:
-                    self._play_zone.player2.player_moving[1] = False
-                if event.key == pygame.K_RIGHT:
-                    self._play_zone.player2.player_moving[2] = False
-                if event.key == pygame.K_DOWN:
-                    self._play_zone.player2.player_moving[3] = False
+                if event.key in GameLoop.MOVEMENT_KEYS_PLAYER1:
+                    self._play_zone.player1.player_moving[GameLoop.MOVEMENT_KEYS_PLAYER1.index(event.key)] = False
+                if event.key in GameLoop.MOVEMENT_KEYS_PLAYER2:
+                    self._play_zone.player2.player_moving[GameLoop.MOVEMENT_KEYS_PLAYER2.index(event.key)] = False
 
         return True
