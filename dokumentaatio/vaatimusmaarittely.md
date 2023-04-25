@@ -11,9 +11,9 @@ pelaajaa, jonka puolelle uusi kolikko myös ilmestyy.
 - Uusi kolikko ilmestyy aina satunnaiseen kohtaan kentässä (tehty).
 - Hirviö jahtaa aina jompaakumpaa pelaajaa ja peli loppuu kun hirviö osuu
 toiseen pelaajista (tehty).
-- Käyttöliittymä, johon voi laittaa pelaajien nimet ja aloittaa pelin.
+- Käyttöliittymä, johon voi laittaa pelaajien nimet ja aloittaa pelin (tehty).
 - Tietokanta, johon pelaajien tulokset tallennetaan.
 
 ## Jatkokehitysideoita
 - Pelin parametrien (pelaajien/hirviön nopeus, kolikkojen määrä jne) säätömahdollisuus.
-- Tulostaulukon näyttäminen.
+- Tulostaulukon näyttäminen. (tehty, mutta näyttää vain nykyisen pelin toistaiseksi)
