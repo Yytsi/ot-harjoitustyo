@@ -19,7 +19,7 @@ class ScoreMenuView:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
         score_label = ttk.Label(
-            master=self._frame, text="Your score was %d ! :)" % self.score)
+            master=self._frame, text=f"Your score was {self.score} ! :)")
 
         score_label.grid(row=0, column=0, columnspan=2, padx=5, pady=2)
 

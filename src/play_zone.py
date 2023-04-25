@@ -31,8 +31,8 @@ class PlayZone:
     def get_score_text(self):
         font = pygame.font.Font(
             pygame.font.get_default_font(), int((self.window_width / 640)*20))
-        text_surface = font.render("Score: %d" %
-                                   self.current_score, True, (153, 255, 153))
+        text_surface = font.render(
+            f"Score: {self.current_score}", True, (153, 255, 153))
         return (text_surface, (10, 10))
 
     def _initialize_sprites(self):
