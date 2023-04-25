@@ -1,4 +1,5 @@
 from ui.main_menu import MainMenuView
+from ui.score_menu import ScoreMenuView
 
 
 class UI:
@@ -20,7 +21,18 @@ class UI:
 
         self._current_view = MainMenuView(
             self._root,
-            self._show_main_menu_view
+            self._show_score_menu_view
+        )
+
+        self._current_view.pack()
+
+    def _show_score_menu_view(self, score=0):
+        self._hide_current_view()
+
+        self._current_view = ScoreMenuView(
+            self._root,
+            self._show_main_menu_view,
+            score
         )
 
         self._current_view.pack()

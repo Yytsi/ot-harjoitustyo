@@ -7,7 +7,7 @@ from sprites.line import Line
 
 
 class PlayZone:
-    def __init__(self, player1_name = "Player 1", player2_name = "Player 2"):
+    def __init__(self, player1_name="Player 1", player2_name="Player 2"):
         self.player1 = None
         self.player2 = None
         self.player1_name = player1_name
@@ -27,13 +27,13 @@ class PlayZone:
             self.window_width, self.window_height = pygame.display.get_surface().get_size()
 
         self._initialize_sprites()
-    
-    def get_score_text(self):
-        font = pygame.font.Font(pygame.font.get_default_font(), int((self.window_width / 640)*20))
-        text_surface = font.render("Score: %d" % self.current_score, True, (153, 255, 153))
-        return (text_surface, (10, 10))
-    
 
+    def get_score_text(self):
+        font = pygame.font.Font(
+            pygame.font.get_default_font(), int((self.window_width / 640)*20))
+        text_surface = font.render("Score: %d" %
+                                   self.current_score, True, (153, 255, 153))
+        return (text_surface, (10, 10))
 
     def _initialize_sprites(self):
         # Scale the images according to the width of the game window.
