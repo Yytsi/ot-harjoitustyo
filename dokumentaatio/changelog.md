@@ -11,3 +11,9 @@
 - Kolikon voi kerätä ja se syntyy toiselle puolelle satunnaiseen kohtaan.
 - Hirviö jahtaa pelaajaa, jonka puolella kolikko on.
 - Hirviöön osuminen päättää pelin.
+
+## Viikko 5
+
+- Pelaajien nimet voi syöttää.
+- Pelaajien tulos (yhdessä kerättyjen kolikkojen määrä) näkyy.
+- Pelin loputtua näkyy tulosruutu (UI), joka vie takaisin päävalikkoon.
