@@ -74,7 +74,7 @@ class PlayZone:
             self.coin.rect.x = new_box_x
             self.coin.rect.y = new_box_y
 
-    def update(self):
+    def update_player_positions(self):
         for player in self.player1, self.player2:
             prev_x, prev_y = player.rect.x, player.rect.y
             player.update()
@@ -85,6 +85,9 @@ class PlayZone:
                     or player.rect.y < 0 or player.rect.y + player.rect.height > self.window_height:
                 player.rect.x = prev_x
                 player.rect.y = prev_y
+
+    def update(self):
+        self.update_player_positions()
 
         # Check if a player hits the monster.
         if pygame.sprite.spritecollide(self.monster, self.players, False):

@@ -34,6 +34,7 @@ class GameLoop:
     def _handle_events(self):
         for event in self._event_queue.get():
             if event.type == pygame.QUIT:
+                # End the game.
                 self._play_zone.game_over = True
                 pygame.quit()
                 return False
