@@ -17,3 +17,8 @@
 - Pelaajien nimet voi syöttää.
 - Pelaajien tulos (yhdessä kerättyjen kolikkojen määrä) näkyy.
 - Pelin loputtua näkyy tulosruutu (UI), joka vie takaisin päävalikkoon.
+
+## Viikko 6
+
+- Pelin tulokset tallennetaan tietokantaan (sqlite3).
+- Parhaimman tuloksen (sekä sen saavuttaneen joukkueen) näkee pelin jälkeen
