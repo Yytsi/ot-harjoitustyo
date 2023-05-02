@@ -21,4 +21,4 @@
 ## Viikko 6
 
 - Pelin tulokset tallennetaan tietokantaan (sqlite3).
-- Parhaimman tuloksen (sekä sen saavuttaneen joukkueen) näkee pelin jälkeen
+- Parhaimman tuloksen (sekä sen saavuttaneen joukkueen) näkee pelin jälkeen.
