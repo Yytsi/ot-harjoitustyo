@@ -56,7 +56,6 @@ class GameLoop:
         """
         for event in self._event_queue.get():
             if event.type == pygame.QUIT:
-                # End the game.
                 self.end_game()
                 return False
 
@@ -70,9 +69,7 @@ class GameLoop:
                     self._play_zone.player2.player_moving[GameLoop.MOVEMENT_KEYS_PLAYER2.index(
                         event.key)] = True
                 if event.key == pygame.K_u:
-                    # End the game.
-                    self._play_zone.game_over = True
-                    pygame.quit()
+                    self.end_game()
                     return False
 
             # Release movement to direction flags.

@@ -49,7 +49,7 @@ class PlayZone:
     def _initialize_sprites(self):
         """Initializes and scales the game sprites bases on the window size of the game.
         """
-        # Scale the images according to the width of the game window.
+        # Scale the images according to the width of the game window (base is 640w, 480h).
         scale_factor = self.window_width / 640
         self.middle_wall = Line(self.window_width // 2,
                                 0, 1, self.window_height)

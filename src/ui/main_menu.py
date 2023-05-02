@@ -32,11 +32,11 @@ class MainMenuView:
     def start_game(self):
         """Starts the game and returns the score of the game which is passed to the score menu view.
         """
-        player1_name = self.player1_name_entry.get()
-        player2_name = self.player1_name_entry.get()
+        player1_name = self.player1_name_entry.get()[:10] or "Player 1"
+        player2_name = self.player2_name_entry.get()[:10] or "Player 2"
         g = Game(player1_name=player1_name, player2_name=player2_name)
         score = g.play_game()
-        self._show_score_menu_view(score)
+        self._show_score_menu_view(player1_name, player2_name, score)
 
     def _initialize(self):
         """Initialize the main menu view.

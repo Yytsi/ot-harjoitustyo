@@ -34,12 +34,14 @@ class UI:
 
         self._current_view.pack()
 
-    def _show_score_menu_view(self, score=0):
+    def _show_score_menu_view(self, player1_name, player2_name, score):
         self._hide_current_view()
 
         self._current_view = ScoreMenuView(
             self._root,
             self._show_main_menu_view,
+            player1_name,
+            player2_name,
             score
         )
 
