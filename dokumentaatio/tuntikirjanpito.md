@@ -9,4 +9,6 @@
 | 17.4 | 3    | Liikkuminen, törmäys, objektien mittasuhteet, hirviö jahtaa |
 | 24.4 | 1    | UI:hin tuki pelaajien nimille ja pisteiden näyttäminen pelissä |
 | 25.4 | 3    | Tulosvalikko (UI) ja koodin rakenteen muuttaminen |
-| yht   | 18   | | 
+| 2.5 | 1    | Dokumentointi |
+| 2.5 | 3    | Tietokanta ja tallentaminen. Tulosvalikko näyttää parhaan tuloksen |
+| yht   | 22   | | 
