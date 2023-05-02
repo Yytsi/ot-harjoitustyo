@@ -12,8 +12,8 @@ pelaajaa, jonka puolelle uusi kolikko myös ilmestyy.
 - Hirviö jahtaa aina jompaakumpaa pelaajaa ja peli loppuu kun hirviö osuu
 toiseen pelaajista (tehty).
 - Käyttöliittymä, johon voi laittaa pelaajien nimet ja aloittaa pelin (tehty).
-- Tietokanta, johon pelaajien tulokset tallennetaan.
+- Tietokanta, johon pelaajien tulokset tallennetaan (tehty).
 
 ## Jatkokehitysideoita
 - Pelin parametrien (pelaajien/hirviön nopeus, kolikkojen määrä jne) säätömahdollisuus.
-- Tulostaulukon näyttäminen. (tehty, mutta näyttää vain nykyisen pelin toistaiseksi)
+- Tulostaulukon näyttäminen. (tehty, mutta näyttää vain nykyisen ja parhaimman tuloksen)
