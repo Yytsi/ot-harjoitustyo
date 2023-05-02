@@ -3,7 +3,16 @@ from game import Game
 
 
 class MainMenuView:
+    """A class representing the main menu view in a game using Tkinter.
+    """
+
     def __init__(self, root, show_score_menu):
+        """Initializes a MainMenuView object.
+
+        Args:
+            root (_type_): root Tkinter window.
+            show_score_menu (_type_): A function that shows the score menu view.
+        """
         self._root = root
         self._frame = None
         self._show_score_menu_view = show_score_menu
@@ -11,12 +20,18 @@ class MainMenuView:
         self._initialize()
 
     def pack(self):
+        """Packs the elements of the score menu frame onto the root window.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Destroy this frame.
+        """
         self._frame.destroy()
 
     def start_game(self):
+        """Starts the game and returns the score of the game which is passed to the score menu view.
+        """
         player1_name = self.player1_name_entry.get()
         player2_name = self.player1_name_entry.get()
         g = Game(player1_name=player1_name, player2_name=player2_name)
@@ -24,6 +39,8 @@ class MainMenuView:
         self._show_score_menu_view(score)
 
     def _initialize(self):
+        """Initialize the main menu view.
+        """
         self._frame = ttk.Frame(master=self._root)
         title_label = ttk.Label(
             master=self._frame, text="Welcome to CatchIt game!")

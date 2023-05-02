@@ -23,6 +23,11 @@ class Game:
         )
 
     def play_game(self):
+        """Starts the game.
+
+        Returns:
+            int: The score of the game.
+        """
         pygame.init()
         score = self._game_loop.start()
         return score

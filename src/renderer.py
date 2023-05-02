@@ -2,7 +2,16 @@ import pygame
 
 
 class Renderer:
+    """Renders objects of the game.
+    """
+
     def __init__(self, display, play_zone):
+        """Initialize with display and game objects.
+
+        Args:
+            display (_type_): pygame display object.
+            play_zone (_type_): Holds game objects used for rendering.
+        """
         self._display = display
         self._play_zone = play_zone
 

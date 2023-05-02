@@ -3,7 +3,15 @@ from ui.score_menu import ScoreMenuView
 
 
 class UI:
+    """A class representing the user interface in a game using Tkinter.
+    """
+
     def __init__(self, root):
+        """Initializes an UI instance.
+
+        Args:
+            root (Tk): root Tkinter window.
+        """
         self._root = root
         self._current_view = None
 

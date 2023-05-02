@@ -8,6 +8,12 @@ from sprites.line import Line
 
 class PlayZone:
     def __init__(self, player1_name="Player 1", player2_name="Player 2"):
+        """Initialize a class that holds the objects of the game.
+
+        Args:
+            player1_name (str, optional): Name of the first player. Defaults to "Player 1".
+            player2_name (str, optional): Name of the second player. Defaults to "Player 2".
+        """
         self.player1 = None
         self.player2 = None
         self.player1_name = player1_name
@@ -29,6 +35,11 @@ class PlayZone:
         self._initialize_sprites()
 
     def get_score_text(self):
+        """Returns the current score text and its position on screen.
+
+        Returns:
+            tuple: Contains the rendered score text surface and its position as a coordinate.
+        """
         font = pygame.font.Font(
             pygame.font.get_default_font(), int((self.window_width / 640)*20))
         text_surface = font.render(
@@ -36,6 +47,8 @@ class PlayZone:
         return (text_surface, (10, 10))
 
     def _initialize_sprites(self):
+        """Initializes and scales the game sprites bases on the window size of the game.
+        """
         # Scale the images according to the width of the game window.
         scale_factor = self.window_width / 640
         self.middle_wall = Line(self.window_width // 2,
@@ -53,13 +66,17 @@ class PlayZone:
         self.coin = Coin(self.window_width * 2, self.window_height * 2, int(scale_factor * 32),
                          int(scale_factor * 32))
 
+        # Spawn the first coin so that it finds its position on the right side of the map.
         self.replace_coin()
 
+        # Add sprites to groups to facilitate group processing.
         self.players.add(self.player1, self.player2)
         self.all_sprites.add(self.coin, self.players,
                              self.middle_wall, self.monster)
 
     def replace_coin(self):
+        """Repositions the coin to a random location.
+        """
         new_box_x = random.randint(
             0, self.window_width // 2 - self.coin.rect.width)
         new_box_y = random.randint(
@@ -75,6 +92,8 @@ class PlayZone:
             self.coin.rect.y = new_box_y
 
     def update_player_positions(self):
+        """Update the players' positions and prevents them from moving outside boundaries.
+        """
         for player in self.player1, self.player2:
             prev_x, prev_y = player.rect.x, player.rect.y
             player.update()
@@ -87,6 +106,8 @@ class PlayZone:
                 player.rect.y = prev_y
 
     def update(self):
+        """Updates player positions, checks collision and moves the monster.
+        """
         self.update_player_positions()
 
         # Check if a player hits the monster.
