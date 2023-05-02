@@ -38,8 +38,9 @@ class ScoreMenuView:
         """
         db_handler = DatabaseHandler()
         if self.score > 0:
-            db_handler.add_score(self.player1_name, self.player2_name, self.score)
-        
+            db_handler.add_score(
+                self.player1_name, self.player2_name, self.score)
+
         best_team = db_handler.get_highest_score_team()
 
         self._frame = ttk.Frame(master=self._root)

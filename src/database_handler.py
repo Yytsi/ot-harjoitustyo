@@ -2,6 +2,8 @@ import sqlite3
 import os
 
 # chatGPT-4 helped generate the following code.
+
+
 class DatabaseHandler:
     def __init__(self):
         dirname = os.path.dirname(__file__)
@@ -39,7 +41,8 @@ class DatabaseHandler:
     def get_highest_score_team(self):
         connection = self.create_connection()
         cursor = connection.cursor()
-        cursor.execute("""SELECT player1_name, player2_name, MAX(score) FROM scores;""")
+        cursor.execute(
+            """SELECT player1_name, player2_name, MAX(score) FROM scores;""")
         result = cursor.fetchone()
         connection.close()
         return result
