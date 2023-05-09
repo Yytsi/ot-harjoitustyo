@@ -53,9 +53,9 @@ class PlayZone:
         scale_factor = self.window_width / 640
         self.middle_wall = Line(self.window_width // 2,
                                 0, 1, self.window_height)
-        self.player1 = Player(50, 50, int(
+        self.player1 = Player(int(50 * scale_factor), int(50 * scale_factor), int(
             scale_factor * 33), int(scale_factor * 63))
-        self.player2 = Player(400, 200, int(
+        self.player2 = Player(int(400 * scale_factor), int(200 * scale_factor), int(
             scale_factor * 33), int(scale_factor * 63))
         self.monster = Monster(self.window_width // 2, self.window_height // 2, int(
             scale_factor * 48), int(scale_factor * 60))

@@ -34,8 +34,6 @@ class ScoreMenuView:
         self._frame.destroy()
 
     def _initialize(self):
-        """Initialize the score menu view.
-        """
         db_handler = DatabaseHandler()
         if self.score > 0:
             db_handler.add_score(
