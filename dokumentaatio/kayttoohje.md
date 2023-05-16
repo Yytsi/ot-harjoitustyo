@@ -1,5 +1,7 @@
 ## Käyttöohje
 
+Lataa projektin viimeisimmän [tägin](https://github.com/Yytsi/ot-harjoitustyo/tree/palautus) koodi valitsemalla Source code.
+
 Projekti vaatii vähintään Python version 3.8 (joka on ilmaistu poetry- riippuvuuslistassa).
 
 ## Käynnistäminen
