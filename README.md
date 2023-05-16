@@ -5,6 +5,8 @@
 
 ## Dokumentaatio
 
+[Käyttöohje](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Vaatimusmäärittely](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
@@ -12,6 +14,8 @@
 [Changelog](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
 [Arkkitehtuurikuvaus](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+[Testausdokumentti](https://github.com/Yytsi/ot-harjoitustyo/blob/master/dokumentaatio/testausdoc.md)
 
 ## Käynnistäminen
 
