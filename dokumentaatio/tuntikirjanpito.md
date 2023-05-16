@@ -11,4 +11,5 @@
 | 25.4 | 3    | Tulosvalikko (UI) ja koodin rakenteen muuttaminen |
 | 2.5 | 1    | Dokumentointi |
 | 2.5 | 3    | Tietokanta ja tallentaminen. Tulosvalikko näyttää parhaan tuloksen |
-| yht   | 22   | | 
+| 16.5 | 2    | Tietokantatestit, nimien rajoitus, dokumentaatio |
+| yht   | 24   | | 
