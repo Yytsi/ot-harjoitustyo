@@ -34,6 +34,7 @@ Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimil
 
 [Viikko 5](https://github.com/Yytsi/ot-harjoitustyo/releases/tag/viikko5)
 [Viikko 6](https://github.com/Yytsi/ot-harjoitustyo/releases/tag/viikko6)
+[Palautus](https://github.com/Yytsi/ot-harjoitustyo/releases/tag/palautus)
 
 ## Kuvien lisenssi
 Pelin käyttämät kuvat ovat sivustolta [itch.io](https://itch.io/), josta on valittu sellaiset kuvat jotka eivät vaatineet mainintaa lisenssistä tai mistään.
