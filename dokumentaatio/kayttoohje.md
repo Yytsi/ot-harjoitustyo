@@ -23,6 +23,9 @@ Pylint tarkistukset voi suorittaa näin:
 poetry run invoke lint
 ```
 
+## Pelaus
+Vasen pelaaja ohjaa hahmoa näppäimillä WASD ja oikea pelaaja nuolinäppäimillä. Kentän ulkopuolelle ei voi liikkua eikä keskirajaa voi ylittää. Kolikon haettua hirviö vaihtaa jahtaamaansa pelaajaa. Hirviön osuttua pelaajaan peli päättyy.
+
 ## Muut toiminnot
 Testikattavuusraportti muodostuu näin:
 ```
