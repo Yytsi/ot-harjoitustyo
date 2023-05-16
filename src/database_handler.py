@@ -5,9 +5,9 @@ import os
 
 
 class DatabaseHandler:
-    def __init__(self):
+    def __init__(self, database_name="scores.db"):
         dirname = os.path.dirname(__file__)
-        self.db_path = os.path.join(dirname, "..", "data", "scores.db")
+        self.db_path = os.path.join(dirname, "..", "data", database_name)
         self.create_table()
 
     def create_connection(self):
@@ -27,6 +27,15 @@ class DatabaseHandler:
                             player2_name TEXT NOT NULL,
                             score INTEGER NOT NULL
                         );""")
+        connection.commit()
+        connection.close()
+
+    def empty_scores(self):
+        connection = self.create_connection()
+        cursor = connection.cursor()
+
+        cursor.execute("DELETE FROM scores;")
+
         connection.commit()
         connection.close()
 
