@@ -1,6 +1,6 @@
 # CatchIt peli
 
-(Keskeneräinen) Hauska kahden pelaajan joukkuepeli, jossa hirviötä paetaan hakemalla kolikkoa omalta puolelta hirviön edestä.
+Hauska kahden pelaajan joukkuepeli, jossa hirviötä paetaan hakemalla kolikkoa omalta puolelta hirviön edestä.
 
 
 ## Dokumentaatio
