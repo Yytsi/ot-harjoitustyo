@@ -1,6 +1,6 @@
 ## Käyttöohje
 
-Lataa projektin viimeisimmän [releasen](https://github.com/Yytsi/ot-harjoitustyo/releases/tag/palautus) koodi valitsemalla Source code.
+Lataa projektin viimeisimmän [releasen](https://github.com/Yytsi/ot-harjoitustyo/releases/tag/loppupalautus) koodi valitsemalla Source code.
 
 Projekti vaatii vähintään Python version 3.8 (joka on ilmaistu poetry- riippuvuuslistassa).
 
