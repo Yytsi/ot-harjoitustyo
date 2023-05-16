@@ -1,0 +1,37 @@
+## Käyttöohje
+
+Projekti vaatii vähintään Python version 3.8 (joka on ilmaistu poetry- riippuvuuslistassa).
+
+## Käynnistäminen
+Aluksi asenna riippuvuudet:
+```
+poetry install
+```
+
+Pelin voi nyt käynnistää näin:
+```
+poetry run invoke start
+```
+
+Testit suoritetaan näin:
+```
+poetry run invoke test
+```
+
+Pylint tarkistukset voi suorittaa näin:
+```
+poetry run invoke lint
+```
+
+## Muut toiminnot
+Testikattavuusraportti muodostuu näin:
+```
+poetry run invoke coverage-report
+```
+Muodostetun index.html tiedoston löytää htmlcov hakemistosta.
+
+
+Koodin tarkistukset voi suorittaa näin:
+```
+poetry run invoke lint
+```
