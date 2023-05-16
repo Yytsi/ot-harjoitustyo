@@ -6,3 +6,4 @@ htmlcov
 .py[cod]
 
 data/scores.db
+data/test.db
